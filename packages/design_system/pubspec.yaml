@@ -1,0 +1,15 @@
+name: design_system
+description: BridgeForward V2 tokens + theme (bright/sharp/contrast).
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^4.0.0

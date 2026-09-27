@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BridgeForward — Design System V2 (bright / sharp / contrast)</title>
+<style>
+:root{--bridge:#2B4EFF;--bridge-dark:#162DA8;--bridge-tint:#E8EDFF;--accent:#00C896;--wa:#22C55E;--wa-dark:#15803C;--ink:#0A1628;--muted:#4B5B74;--paper:#FFFFFF;--bg:#F6F8FF;--card:#FFFFFF;--line:#E2E8F5;--radius:16px;--danger:#DC2626;--warn:#B45309;--warnbg:#FFF4DE}
+*{box-sizing:border-box}body{margin:0;font-family:'Inter','Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1100px;margin:0 auto;padding:32px 20px 80px}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#162DA8 60%,#2B4EFF 100%);color:#fff;border-radius:24px;padding:36px 32px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;border:1px solid #162DA8}
+.hero h1{margin:0;font-size:34px;letter-spacing:-.02em}.hero p{margin:8px 0 0;color:#D8E2FF;max-width:660px}
+.pill{display:inline-block;background:var(--accent);color:#05332A;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.04em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 1px 0 #E2E8F5}
+.card h2{font-size:20px;margin:0 0 4px}.card p.sub{margin:0 0 16px;color:var(--muted);font-size:14px}
+.swatches{display:flex;gap:10px;flex-wrap:wrap}.sw{flex:1;min-width:110px;border-radius:12px;padding:12px;color:#fff;font-size:12px;font-weight:700}.sw small{display:block;font-weight:400;opacity:.95}
+.type div{border-bottom:1px dashed var(--line);padding:8px 0}.t12{font-size:12px}.t14{font-size:14px}.t16{font-size:16px}.t20{font-size:20px;font-weight:600}.t28{font-size:28px;font-weight:700}.t34{font-size:34px;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:14px 18px;font-weight:800;font-size:16px;cursor:pointer;width:100%;margin:6px 0;border:1px solid transparent}
+.btn-wa{background:var(--wa);color:#053B1A;border-color:#15803C}.btn-primary{background:var(--bridge);color:#fff}.btn-secondary{background:var(--bridge-tint);color:var(--bridge-dark);border-color:#C6D4FF}.btn-tertiary{background:transparent;color:var(--muted)}
+.media{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:10px;margin:8px 0;background:#fff}.thumb{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#2B4EFF,#00C896);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}.badge{display:inline-block;font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px;margin:2px 4px 2px 0;border:1px solid transparent}.b-cre{background:#E8EDFF;color:#2B4EFF;border-color:#C6D4FF}.b-inv{background:#E8EDFF;color:#162DA8;border-color:#2B4EFF}.b-col{background:#D9F8EE;color:#0A7A64;border-color:#6EE7C8}.b-buy{background:#FFE4EF;color:#BE185D;border-color:#FDA4C0}
+.nav{display:flex;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}.nav div{flex:1;text-align:center;padding:12px;font-size:12px;color:var(--muted)}.nav div.active{color:var(--bridge-dark);font-weight:800;background:var(--bridge-tint)}
+.progress{height:10px;background:#E8EDFF;border-radius:999px;overflow:hidden}.progress i{display:block;height:100%;width:65%;background:linear-gradient(90deg,#2B4EFF,#00C896)}
+.note{background:var(--warnbg);border:1px solid #F5C453;border-radius:12px;padding:12px;font-size:14px}
+code{background:#0A1628;color:#7DA2FF;padding:2px 6px;border-radius:6px;font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}th{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero"><div><span class="pill">V2 • BRIGHT / SHARP / CONTRAST</span><h1>BridgeForward</h1><p>All colors replaced. Bright cobalt + mint pop on off-white, near-black text for 4.5:1+ contrast. Vivid but capped — no neon. WhatsApp green reserved for Share.</p></div></div>
+<div class="grid">
+<div class="card"><h2>1. New palette (all changed)</h2><p class="sub">Sharp pure hues • white text ≥5:1 on fills</p><div class="swatches">
+<div class="sw" style="background:#2B4EFF">primary #2B4EFF<small>buttons / links</small></div>
+<div class="sw" style="background:#162DA8">primary-dark #162DA8<small>nav active / press</small></div>
+<div class="sw" style="background:#00C896;color:#05332A">accent #00C896<small>gradient pop only</small></div>
+<div class="sw" style="background:#22C55E;color:#053B1A">wa #22C55E<small>Share only</small></div>
+<div class="sw" style="background:#0A1628">ink #0A1628<small>body text</small></div>
+<div class="sw" style="background:#fff;color:#0A1628;border:1px solid #E2E8F5">paper #FFFFFF<small>cards on #F6F8FF</small></div>
+<div class="sw" style="background:#DC2626">danger #DC2626<small>errors</small></div>
+<div class="sw" style="background:#B45309">warn #B45309<small>on #FFF4DE</small></div>
+</div>
+<table><tr><th>Pair</th><th>Contrast</th><th>Use</th></tr>
+<tr><td>#2B4EFF on #FFF</td><td>~7:1</td><td>Primary button</td></tr>
+<tr><td>#0A1628 on #F6F8FF</td><td>~15:1</td><td>Body</td></tr>
+<tr><td>#053B1A on #22C55E</td><td>~6:1</td><td>Share label</td></tr></table></div>
+<div class="card type"><h2>2. Typography</h2><p class="sub">Inter / Plus Jakarta Sans</p>
+<div class="t34">34 Bold — Hero</div><div class="t28">28 Bold — Title</div><div class="t20">20 Semi — Card</div><div class="t16">16 Regular — Body on #F6F8FF</div><div class="t14">14 — Caption #4B5B74</div><div class="t12">12 LABEL — TRACKED</div></div>
+<div class="card"><h2>3. Buttons (new)</h2><p class="sub">High-saturation fills, dark text on green</p>
+<button class="btn btn-wa">↗ Share to WhatsApp</button>
+<button class="btn btn-primary">Prepared ✓ — Preview</button>
+<button class="btn btn-secondary">↓ Save to device</button>
+<button class="btn btn-tertiary">Do it later →</button></div>
+<div class="card"><h2>4. Media & History</h2><p class="sub">Crisp thumbs, blue progress</p>
+<div class="media"><div class="thumb">▶</div><div><b>Video — Today</b><br><small style="color:#4B5B74">0:32 • 24MB → 18MB</small></div></div>
+<div class="media"><div class="thumb" style="background:linear-gradient(135deg,#162DA8,#2B4EFF)">◉</div><div><b>Photo — Yesterday</b><br><small style="color:#4B5B74">4032×3024 • HD ready</small></div></div>
+<div class="progress"><i></i></div><small>Preparing… 65% • Cancel</small></div>
+<div class="card"><h2>5. Badges & Nav</h2><p class="sub">All badge colors new</p>
+<span class="badge b-cre">Creator</span><span class="badge b-inv">Investor</span><span class="badge b-col">Collaborator</span><span class="badge b-buy">Buyer</span>
+<div style="height:12px"></div><div class="nav"><div class="active">● Home</div><div>◷ History</div><div>◎ Discover</div><div>○ Profile</div></div>
+<div style="height:12px"></div><div class="note">Why not neon: lightness capped 45–62%, mint used only for gradients, body stays near-black on off-white.</div></div>
+<div class="card"><h2>6. Rules</h2><p class="sub">Bright but controlled</p><p>• Bright: saturation +40-70% vs V1<br>• Sharp: 1px <code>#E2E8F5</code> borders, solid fills<br>• Contrast: ≥4.5:1 text, ≥5:1 buttons<br>• Not too bright: no pure neon, warn text dark <code>#B45309</code> on cream</p></div>
+</div>
+</div>
+</body>
+</html>

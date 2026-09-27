@@ -1,0 +1,6 @@
+name: media_pipeline
+description: Client-first media pipeline contract (ADR-003).
+version: 0.0.1
+publish_to: none
+environment:
+  sdk: ">=3.4.0 <4.0.0"

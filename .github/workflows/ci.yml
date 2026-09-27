@@ -1,0 +1,14 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  plan-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Guard required Phase 0 files
+        run: |
+          test -f IMPLEMENTATION_PLAN.md
+          test -f supabase/migrations/0001_init.sql
+          test -f apps/mobile/pubspec.yaml
+          test -f packages/design_system/lib/src/tokens.dart
+          test -f .env.example
