@@ -1,0 +1,33 @@
+[2026-09-27 16:04:07.232] [info]          app starting { version: '1.18.31', packaged: true, onboardingTest: false }
+[2026-09-27 16:04:07.417] [info]          tauri migration: already done, skipping
+[2026-09-27 16:04:07.495] [info]          auto updater configured {
+  channel: 'latest',
+  allowPrerelease: false,
+  allowDowngrade: true,
+  currentVersion: '1.18.31'
+}
+[2026-09-27 16:04:07.525] [info]          updater state changed { from: 'idle', to: 'checking' }
+[2026-09-27 16:04:07.526] [info]          Checking for update
+[2026-09-27 16:04:07.936] [info]            sidecar connection started { version: 'v1' }
+[2026-09-27 16:04:08.073] [info]            spawning sidecar { url: 'http://127.0.0.1:53677' }
+[2026-09-27 16:04:13.199] [info]            loading task finished
+[2026-09-27 16:04:15.365] [info]            awaiting server ready
+[2026-09-27 16:04:15.366] [info]            server ready { url: 'http://127.0.0.1:53677' }
+[2026-09-27 16:04:32.259] [error]              Error: Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:133608)
+    at SimpleURLLoaderWrapper.emit (node:events:509:28)
+[2026-09-27 16:04:32.260] [info]               updater state changed { from: 'checking', to: 'error' }
+[2026-09-27 16:14:07.556] [info]               updater state changed { from: 'error', to: 'checking' }
+[2026-09-27 16:14:07.575] [info]               Checking for update
+[2026-09-27 16:14:31.703] [error]              Error: Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:133608)
+    at SimpleURLLoaderWrapper.emit (node:events:509:28)
+[2026-09-27 16:14:31.704] [info]               updater state changed { from: 'checking', to: 'error' }
+[2026-09-27 16:24:07.558] [info]               updater state changed { from: 'error', to: 'checking' }
+[2026-09-27 16:24:07.559] [info]               Checking for update
+[2026-09-27 16:24:13.186] [info]               Found version 1.18.32 (url: opencode-desktop-win-arm64.exe, opencode-desktop-win-x64.exe)
+[2026-09-27 16:24:13.187] [info]               updater state changed { from: 'checking', to: 'downloading' }
+[2026-09-27 16:24:13.189] [info]               Downloading update from opencode-desktop-win-arm64.exe, opencode-desktop-win-x64.exe
+[2026-09-27 16:24:13.200] [debug]              updater cache dir: C:\Users\Muhibudeen\AppData\Local\@opencode-aidesktop-updater
+[2026-09-27 16:24:19.112] [info]               Update has already been downloaded to C:\Users\Muhibudeen\AppData\Local\@opencode-aidesktop-updater\pending\opencode-desktop-win-x64.exe).
+[2026-09-27 16:24:19.251] [info]               updater state changed { from: 'downloading', to: 'ready' }

@@ -1,0 +1,14 @@
+[2026-09-27 23:53:21.368] [error] (window)     renderer unresponsive {
+  window: '3727745c-0c1a-4665-bdd5-5e91ed5db256',
+  currentURL: 'oc://renderer/index.html'
+}
+[2026-09-27 23:53:23.807] [error] (window)     renderer responsive {
+  window: '3727745c-0c1a-4665-bdd5-5e91ed5db256',
+  currentURL: 'oc://renderer/index.html'
+}
+[2026-09-27 23:53:23.813] [error] (window)     renderer unresponsive samples
+Window: 3727745c-0c1a-4665-bdd5-5e91ed5db256
+URL: oc://renderer/index.html
+<2> 
+    at HTMLDivElement.sentryWrapped (oc://renderer/assets/main-mfFBJ4oT.js:6775:33)
+Total Samples: 2

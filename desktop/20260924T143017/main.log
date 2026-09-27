@@ -1,0 +1,2046 @@
+[2026-09-24 15:30:17.841] [info]          app starting { version: '1.18.31', packaged: true, onboardingTest: false }
+[2026-09-24 15:30:18.216] [info]          tauri migration: already done, skipping
+[2026-09-24 15:30:19.610] [info]          auto updater configured {
+  channel: 'latest',
+  allowPrerelease: false,
+  allowDowngrade: true,
+  currentVersion: '1.18.31'
+}
+[2026-09-24 15:30:19.695] [info]          updater state changed { from: 'idle', to: 'checking' }
+[2026-09-24 15:30:19.697] [info]          Checking for update
+[2026-09-24 15:30:20.768] [info]            sidecar connection started { version: 'v1' }
+[2026-09-24 15:30:20.902] [info]            spawning sidecar { url: 'http://127.0.0.1:55151' }
+[2026-09-24 15:30:27.173] [info]            Found version 1.18.32 (url: opencode-desktop-win-arm64.exe, opencode-desktop-win-x64.exe)
+[2026-09-24 15:30:27.177] [info]            updater state changed { from: 'checking', to: 'downloading' }
+[2026-09-24 15:30:27.179] [info]            Downloading update from opencode-desktop-win-arm64.exe, opencode-desktop-win-x64.exe
+[2026-09-24 15:30:27.181] [debug]           updater cache dir: C:\Users\Muhibudeen\AppData\Local\@opencode-aidesktop-updater
+[2026-09-24 15:30:27.293] [warn]            disableWebInstaller is set to false, you should set it to true if you do not plan on using a web installer. This will default to true in a future version.
+[2026-09-24 15:30:27.295] [info]            Download block maps (old: "https://github.com/anomalyco/opencode/releases/download/v1.18.31/opencode-desktop-win-x64.exe.blockmap", new: https://github.com/anomalyco/opencode/releases/download/v1.18.32/opencode-desktop-win-x64.exe.blockmap)
+[2026-09-24 15:30:31.842] [info]            loading task finished
+[2026-09-24 15:30:32.212] [debug]           Hx6xp8bVbnkicR6+6Zc+Uf/Q duplicated in blockmap (same size), it doesn't lead to broken differential downloader, just corresponding block will be skipped)
+[2026-09-24 15:30:32.232] [info]            File has 1212 changed blocks
+[2026-09-24 15:30:32.233] [debug]           [
+  {
+    "kind": 1,
+    "start": 0,
+    "end": 15450
+  },
+  {
+    "kind": 0,
+    "start": 15450,
+    "end": 83675
+  },
+  {
+    "kind": 1,
+    "start": 83675,
+    "end": 126065
+  },
+  {
+    "kind": 0,
+    "start": 126062,
+    "end": 216128
+  },
+  {
+    "kind": 1,
+    "start": 216131,
+    "end": 234922
+  },
+  {
+    "kind": 0,
+    "start": 234919,
+    "end": 13195386
+  },
+  {
+    "kind": 1,
+    "start": 13195389,
+    "end": 13301701
+  },
+  {
+    "kind": 0,
+    "start": 13301698,
+    "end": 13462661
+  },
+  {
+    "kind": 1,
+    "start": 13462664,
+    "end": 26841097
+  },
+  {
+    "kind": 0,
+    "start": 26810069,
+    "end": 26844471
+  },
+  {
+    "kind": 1,
+    "start": 26875499,
+    "end": 26888002
+  },
+  {
+    "kind": 0,
+    "start": 26856974,
+    "end": 26872679
+  },
+  {
+    "kind": 1,
+    "start": 26903707,
+    "end": 26931643
+  },
+  {
+    "kind": 0,
+    "start": 26900615,
+    "end": 26933848
+  },
+  {
+    "kind": 1,
+    "start": 26964876,
+    "end": 26990220
+  },
+  {
+    "kind": 0,
+    "start": 26959192,
+    "end": 26983314
+  },
+  {
+    "kind": 1,
+    "start": 27014342,
+    "end": 27030885
+  },
+  {
+    "kind": 0,
+    "start": 26999857,
+    "end": 27016563
+  },
+  {
+    "kind": 1,
+    "start": 27047591,
+    "end": 27080359
+  },
+  {
+    "kind": 0,
+    "start": 27049331,
+    "end": 27071078
+  },
+  {
+    "kind": 1,
+    "start": 27102106,
+    "end": 27124872
+  },
+  {
+    "kind": 0,
+    "start": 27093844,
+    "end": 27116009
+  },
+  {
+    "kind": 1,
+    "start": 27147037,
+    "end": 27179805
+  },
+  {
+    "kind": 0,
+    "start": 27148777,
+    "end": 27180810
+  },
+  {
+    "kind": 1,
+    "start": 27211838,
+    "end": 27277374
+  },
+  {
+    "kind": 0,
+    "start": 27246346,
+    "end": 27280152
+  },
+  {
+    "kind": 1,
+    "start": 27311180,
+    "end": 27322067
+  },
+  {
+    "kind": 0,
+    "start": 27291039,
+    "end": 27323807
+  },
+  {
+    "kind": 1,
+    "start": 27354835,
+    "end": 27462499
+  },
+  {
+    "kind": 0,
+    "start": 27431471,
+    "end": 27466164
+  },
+  {
+    "kind": 1,
+    "start": 27497192,
+    "end": 27522213
+  },
+  {
+    "kind": 0,
+    "start": 27491185,
+    "end": 27509502
+  },
+  {
+    "kind": 1,
+    "start": 27540530,
+    "end": 27569715
+  },
+  {
+    "kind": 0,
+    "start": 27538687,
+    "end": 27552429
+  },
+  {
+    "kind": 1,
+    "start": 27583457,
+    "end": 27606912
+  },
+  {
+    "kind": 0,
+    "start": 27575884,
+    "end": 27620149
+  },
+  {
+    "kind": 1,
+    "start": 27651177,
+    "end": 27752735
+  },
+  {
+    "kind": 0,
+    "start": 27721702,
+    "end": 27744911
+  },
+  {
+    "kind": 1,
+    "start": 27775944,
+    "end": 28158556
+  },
+  {
+    "kind": 0,
+    "start": 28127448,
+    "end": 28157574
+  },
+  {
+    "kind": 1,
+    "start": 28188682,
+    "end": 30328644
+  },
+  {
+    "kind": 0,
+    "start": 30299453,
+    "end": 30324472
+  },
+  {
+    "kind": 1,
+    "start": 30353663,
+    "end": 30386431
+  },
+  {
+    "kind": 0,
+    "start": 30357240,
+    "end": 30386512
+  },
+  {
+    "kind": 1,
+    "start": 30415703,
+    "end": 30438996
+  },
+  {
+    "kind": 0,
+    "start": 30409805,
+    "end": 30435262
+  },
+  {
+    "kind": 1,
+    "start": 30464453,
+    "end": 30482035
+  },
+  {
+    "kind": 0,
+    "start": 30452844,
+    "end": 30462581
+  },
+  {
+    "kind": 1,
+    "start": 30491772,
+    "end": 30519620
+  },
+  {
+    "kind": 0,
+    "start": 30490429,
+    "end": 30530665
+  },
+  {
+    "kind": 1,
+    "start": 30559856,
+    "end": 30592624
+  },
+  {
+    "kind": 0,
+    "start": 30563433,
+    "end": 30576348
+  },
+  {
+    "kind": 1,
+    "start": 30605539,
+    "end": 30638307
+  },
+  {
+    "kind": 0,
+    "start": 30609116,
+    "end": 30624254
+  },
+  {
+    "kind": 1,
+    "start": 30653445,
+    "end": 30666602
+  },
+  {
+    "kind": 0,
+    "start": 30637411,
+    "end": 30653531
+  },
+  {
+    "kind": 1,
+    "start": 30682722,
+    "end": 30709059
+  },
+  {
+    "kind": 0,
+    "start": 30679868,
+    "end": 30695060
+  },
+  {
+    "kind": 1,
+    "start": 30724251,
+    "end": 30757019
+  },
+  {
+    "kind": 0,
+    "start": 30727828,
+    "end": 30764991
+  },
+  {
+    "kind": 1,
+    "start": 30794182,
+    "end": 30813393
+  },
+  {
+    "kind": 0,
+    "start": 30784202,
+    "end": 30822318
+  },
+  {
+    "kind": 1,
+    "start": 30851509,
+    "end": 31015237
+  },
+  {
+    "kind": 0,
+    "start": 30986043,
+    "end": 31015201
+  },
+  {
+    "kind": 1,
+    "start": 31044395,
+    "end": 31071193
+  },
+  {
+    "kind": 0,
+    "start": 31042002,
+    "end": 31074770
+  },
+  {
+    "kind": 1,
+    "start": 31103961,
+    "end": 31116285
+  },
+  {
+    "kind": 0,
+    "start": 31087094,
+    "end": 31095406
+  },
+  {
+    "kind": 1,
+    "start": 31124597,
+    "end": 31356757
+  },
+  {
+    "kind": 0,
+    "start": 31327566,
+    "end": 31358991
+  },
+  {
+    "kind": 1,
+    "start": 31388182,
+    "end": 31408160
+  },
+  {
+    "kind": 0,
+    "start": 31378969,
+    "end": 31411737
+  },
+  {
+    "kind": 1,
+    "start": 31440928,
+    "end": 31461678
+  },
+  {
+    "kind": 0,
+    "start": 31432487,
+    "end": 31458541
+  },
+  {
+    "kind": 1,
+    "start": 31487732,
+    "end": 31512009
+  },
+  {
+    "kind": 0,
+    "start": 31482818,
+    "end": 31505408
+  },
+  {
+    "kind": 1,
+    "start": 31534599,
+    "end": 34724216
+  },
+  {
+    "kind": 0,
+    "start": 60181,
+    "end": 70758
+  },
+  {
+    "kind": 1,
+    "start": 34734793,
+    "end": 34938575
+  },
+  {
+    "kind": 0,
+    "start": 34902293,
+    "end": 34912924
+  },
+  {
+    "kind": 1,
+    "start": 34949206,
+    "end": 35053565
+  },
+  {
+    "kind": 0,
+    "start": 35017280,
+    "end": 35037755
+  },
+  {
+    "kind": 1,
+    "start": 35074040,
+    "end": 35099448
+  },
+  {
+    "kind": 0,
+    "start": 35063163,
+    "end": 35074014
+  },
+  {
+    "kind": 1,
+    "start": 35110299,
+    "end": 36042632
+  },
+  {
+    "kind": 0,
+    "start": 36107473,
+    "end": 36134979
+  },
+  {
+    "kind": 1,
+    "start": 36070138,
+    "end": 36092795
+  },
+  {
+    "kind": 0,
+    "start": 36157636,
+    "end": 36178535
+  },
+  {
+    "kind": 1,
+    "start": 36113694,
+    "end": 36131639
+  },
+  {
+    "kind": 0,
+    "start": 36196480,
+    "end": 36229248
+  },
+  {
+    "kind": 1,
+    "start": 36164407,
+    "end": 36276905
+  },
+  {
+    "kind": 0,
+    "start": 36341911,
+    "end": 36376302
+  },
+  {
+    "kind": 1,
+    "start": 36311296,
+    "end": 36435717
+  },
+  {
+    "kind": 0,
+    "start": 36500738,
+    "end": 36509962
+  },
+  {
+    "kind": 1,
+    "start": 36444941,
+    "end": 36477709
+  },
+  {
+    "kind": 0,
+    "start": 36542730,
+    "end": 36551042
+  },
+  {
+    "kind": 1,
+    "start": 36486021,
+    "end": 36576464
+  },
+  {
+    "kind": 0,
+    "start": 36641485,
+    "end": 36650011
+  },
+  {
+    "kind": 1,
+    "start": 36584990,
+    "end": 36617758
+  },
+  {
+    "kind": 0,
+    "start": 36682779,
+    "end": 36693789
+  },
+  {
+    "kind": 1,
+    "start": 36628768,
+    "end": 36714260
+  },
+  {
+    "kind": 0,
+    "start": 36779281,
+    "end": 36790056
+  },
+  {
+    "kind": 1,
+    "start": 36725035,
+    "end": 36822251
+  },
+  {
+    "kind": 0,
+    "start": 36887272,
+    "end": 36901449
+  },
+  {
+    "kind": 1,
+    "start": 36836428,
+    "end": 36875903
+  },
+  {
+    "kind": 0,
+    "start": 36940924,
+    "end": 36963171
+  },
+  {
+    "kind": 1,
+    "start": 36898150,
+    "end": 36963568
+  },
+  {
+    "kind": 0,
+    "start": 37028533,
+    "end": 37550533
+  },
+  {
+    "kind": 1,
+    "start": 37485568,
+    "end": 37585727
+  },
+  {
+    "kind": 0,
+    "start": 37650698,
+    "end": 56324681
+  },
+  {
+    "kind": 1,
+    "start": 56259710,
+    "end": 57760841
+  },
+  {
+    "kind": 0,
+    "start": 57825985,
+    "end": 117331903
+  },
+  {
+    "kind": 1,
+    "start": 117266759,
+    "end": 117523384
+  },
+  {
+    "kind": 0,
+    "start": 117588532,
+    "end": 117656816
+  },
+  {
+    "kind": 1,
+    "start": 117591668,
+    "end": 117743238
+  },
+  {
+    "kind": 0,
+    "start": 117808385,
+    "end": 120535085
+  },
+  {
+    "kind": 1,
+    "start": 120469938,
+    "end": 120490132
+  },
+  {
+    "kind": 0,
+    "start": 120555284,
+    "end": 123783890
+  },
+  {
+    "kind": 1,
+    "start": 123718738,
+    "end": 123739924
+  },
+  {
+    "kind": 0,
+    "start": 123805067,
+    "end": 123837835
+  },
+  {
+    "kind": 1,
+    "start": 123772692,
+    "end": 124256084
+  },
+  {
+    "kind": 0,
+    "start": 124321168,
+    "end": 125916164
+  },
+  {
+    "kind": 1,
+    "start": 125851080,
+    "end": 125876731
+  },
+  {
+    "kind": 0,
+    "start": 125941815,
+    "end": 126173247
+  },
+  {
+    "kind": 1,
+    "start": 126108163,
+    "end": 126287784
+  }
+]
+[2026-09-24 15:30:32.258] [info]            Full: 123,327.91 KB, To download: 24,699.73 KB (20%)
+[2026-09-24 15:30:38.716] [info]            awaiting server ready
+[2026-09-24 15:30:38.722] [info]            server ready { url: 'http://127.0.0.1:55151' }
+[2026-09-24 15:30:39.234] [info]            Differential download: https://github.com/anomalyco/opencode/releases/download/v1.18.32/opencode-desktop-win-x64.exe
+[2026-09-24 15:30:39.243] [debug]           download range: bytes=0-15449
+[2026-09-24 15:30:41.279] [info]            Redirect to https://release-assets.githubusercontent.com/github-production-release-asset/975734319/5c261d2d-8863-4e28-be76-c7dd0d75d0af
+[2026-09-24 15:30:44.996] [debug]           download range: bytes=83675-126064
+[2026-09-24 15:30:49.863] [debug]              download range: bytes=216131-234921
+[2026-09-24 15:31:16.260] [error]              Cannot download differentially, fallback to full download: Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:133608)
+    at SimpleURLLoaderWrapper.emit (node:events:509:28)
+[2026-09-24 15:31:41.069] [error]              Error: Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:133608)
+    at SimpleURLLoaderWrapper.emit (node:events:509:28)
+[2026-09-24 15:31:41.072] [info]               updater state changed { from: 'downloading', to: 'error' }
+[2026-09-24 15:40:19.691] [info]               updater state changed { from: 'error', to: 'checking' }
+[2026-09-24 15:40:19.703] [info]               Checking for update
+[2026-09-24 15:40:19.740] [error]              Error: Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:133608)
+    at SimpleURLLoaderWrapper.emit (node:events:509:28)
+[2026-09-24 15:40:19.741] [info]               updater state changed { from: 'checking', to: 'error' }
+[2026-09-27 11:13:02.158] [info]               updater state changed { from: 'error', to: 'checking' }
+[2026-09-27 11:13:02.492] [info]               Checking for update
+[2026-09-27 11:13:03.724] [error]              Error: Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:133608)
+    at SimpleURLLoaderWrapper.emit (node:events:509:28)
+[2026-09-27 11:13:03.725] [info]               updater state changed { from: 'checking', to: 'error' }
+[2026-09-27 11:23:02.168] [info]               updater state changed { from: 'error', to: 'checking' }
+[2026-09-27 11:23:02.177] [info]               Checking for update
+[2026-09-27 11:23:12.403] [info]               Found version 1.18.32 (url: opencode-desktop-win-arm64.exe, opencode-desktop-win-x64.exe)
+[2026-09-27 11:23:12.405] [info]               updater state changed { from: 'checking', to: 'downloading' }
+[2026-09-27 11:23:12.406] [info]               Downloading update from opencode-desktop-win-arm64.exe, opencode-desktop-win-x64.exe
+[2026-09-27 11:23:12.428] [warn]               disableWebInstaller is set to false, you should set it to true if you do not plan on using a web installer. This will default to true in a future version.
+[2026-09-27 11:23:12.430] [info]               Download block maps (old: "https://github.com/anomalyco/opencode/releases/download/v1.18.31/opencode-desktop-win-x64.exe.blockmap", new: https://github.com/anomalyco/opencode/releases/download/v1.18.32/opencode-desktop-win-x64.exe.blockmap)
+[2026-09-27 11:23:23.303] [debug]              Hx6xp8bVbnkicR6+6Zc+Uf/Q duplicated in blockmap (same size), it doesn't lead to broken differential downloader, just corresponding block will be skipped)
+[2026-09-27 11:23:23.329] [info]               File has 1212 changed blocks
+[2026-09-27 11:23:23.330] [debug]              [
+  {
+    "kind": 1,
+    "start": 0,
+    "end": 15450
+  },
+  {
+    "kind": 0,
+    "start": 15450,
+    "end": 83675
+  },
+  {
+    "kind": 1,
+    "start": 83675,
+    "end": 126065
+  },
+  {
+    "kind": 0,
+    "start": 126062,
+    "end": 216128
+  },
+  {
+    "kind": 1,
+    "start": 216131,
+    "end": 234922
+  },
+  {
+    "kind": 0,
+    "start": 234919,
+    "end": 13195386
+  },
+  {
+    "kind": 1,
+    "start": 13195389,
+    "end": 13301701
+  },
+  {
+    "kind": 0,
+    "start": 13301698,
+    "end": 13462661
+  },
+  {
+    "kind": 1,
+    "start": 13462664,
+    "end": 26841097
+  },
+  {
+    "kind": 0,
+    "start": 26810069,
+    "end": 26844471
+  },
+  {
+    "kind": 1,
+    "start": 26875499,
+    "end": 26888002
+  },
+  {
+    "kind": 0,
+    "start": 26856974,
+    "end": 26872679
+  },
+  {
+    "kind": 1,
+    "start": 26903707,
+    "end": 26931643
+  },
+  {
+    "kind": 0,
+    "start": 26900615,
+    "end": 26933848
+  },
+  {
+    "kind": 1,
+    "start": 26964876,
+    "end": 26990220
+  },
+  {
+    "kind": 0,
+    "start": 26959192,
+    "end": 26983314
+  },
+  {
+    "kind": 1,
+    "start": 27014342,
+    "end": 27030885
+  },
+  {
+    "kind": 0,
+    "start": 26999857,
+    "end": 27016563
+  },
+  {
+    "kind": 1,
+    "start": 27047591,
+    "end": 27080359
+  },
+  {
+    "kind": 0,
+    "start": 27049331,
+    "end": 27071078
+  },
+  {
+    "kind": 1,
+    "start": 27102106,
+    "end": 27124872
+  },
+  {
+    "kind": 0,
+    "start": 27093844,
+    "end": 27116009
+  },
+  {
+    "kind": 1,
+    "start": 27147037,
+    "end": 27179805
+  },
+  {
+    "kind": 0,
+    "start": 27148777,
+    "end": 27180810
+  },
+  {
+    "kind": 1,
+    "start": 27211838,
+    "end": 27277374
+  },
+  {
+    "kind": 0,
+    "start": 27246346,
+    "end": 27280152
+  },
+  {
+    "kind": 1,
+    "start": 27311180,
+    "end": 27322067
+  },
+  {
+    "kind": 0,
+    "start": 27291039,
+    "end": 27323807
+  },
+  {
+    "kind": 1,
+    "start": 27354835,
+    "end": 27462499
+  },
+  {
+    "kind": 0,
+    "start": 27431471,
+    "end": 27466164
+  },
+  {
+    "kind": 1,
+    "start": 27497192,
+    "end": 27522213
+  },
+  {
+    "kind": 0,
+    "start": 27491185,
+    "end": 27509502
+  },
+  {
+    "kind": 1,
+    "start": 27540530,
+    "end": 27569715
+  },
+  {
+    "kind": 0,
+    "start": 27538687,
+    "end": 27552429
+  },
+  {
+    "kind": 1,
+    "start": 27583457,
+    "end": 27606912
+  },
+  {
+    "kind": 0,
+    "start": 27575884,
+    "end": 27620149
+  },
+  {
+    "kind": 1,
+    "start": 27651177,
+    "end": 27752735
+  },
+  {
+    "kind": 0,
+    "start": 27721702,
+    "end": 27744911
+  },
+  {
+    "kind": 1,
+    "start": 27775944,
+    "end": 28158556
+  },
+  {
+    "kind": 0,
+    "start": 28127448,
+    "end": 28157574
+  },
+  {
+    "kind": 1,
+    "start": 28188682,
+    "end": 30328644
+  },
+  {
+    "kind": 0,
+    "start": 30299453,
+    "end": 30324472
+  },
+  {
+    "kind": 1,
+    "start": 30353663,
+    "end": 30386431
+  },
+  {
+    "kind": 0,
+    "start": 30357240,
+    "end": 30386512
+  },
+  {
+    "kind": 1,
+    "start": 30415703,
+    "end": 30438996
+  },
+  {
+    "kind": 0,
+    "start": 30409805,
+    "end": 30435262
+  },
+  {
+    "kind": 1,
+    "start": 30464453,
+    "end": 30482035
+  },
+  {
+    "kind": 0,
+    "start": 30452844,
+    "end": 30462581
+  },
+  {
+    "kind": 1,
+    "start": 30491772,
+    "end": 30519620
+  },
+  {
+    "kind": 0,
+    "start": 30490429,
+    "end": 30530665
+  },
+  {
+    "kind": 1,
+    "start": 30559856,
+    "end": 30592624
+  },
+  {
+    "kind": 0,
+    "start": 30563433,
+    "end": 30576348
+  },
+  {
+    "kind": 1,
+    "start": 30605539,
+    "end": 30638307
+  },
+  {
+    "kind": 0,
+    "start": 30609116,
+    "end": 30624254
+  },
+  {
+    "kind": 1,
+    "start": 30653445,
+    "end": 30666602
+  },
+  {
+    "kind": 0,
+    "start": 30637411,
+    "end": 30653531
+  },
+  {
+    "kind": 1,
+    "start": 30682722,
+    "end": 30709059
+  },
+  {
+    "kind": 0,
+    "start": 30679868,
+    "end": 30695060
+  },
+  {
+    "kind": 1,
+    "start": 30724251,
+    "end": 30757019
+  },
+  {
+    "kind": 0,
+    "start": 30727828,
+    "end": 30764991
+  },
+  {
+    "kind": 1,
+    "start": 30794182,
+    "end": 30813393
+  },
+  {
+    "kind": 0,
+    "start": 30784202,
+    "end": 30822318
+  },
+  {
+    "kind": 1,
+    "start": 30851509,
+    "end": 31015237
+  },
+  {
+    "kind": 0,
+    "start": 30986043,
+    "end": 31015201
+  },
+  {
+    "kind": 1,
+    "start": 31044395,
+    "end": 31071193
+  },
+  {
+    "kind": 0,
+    "start": 31042002,
+    "end": 31074770
+  },
+  {
+    "kind": 1,
+    "start": 31103961,
+    "end": 31116285
+  },
+  {
+    "kind": 0,
+    "start": 31087094,
+    "end": 31095406
+  },
+  {
+    "kind": 1,
+    "start": 31124597,
+    "end": 31356757
+  },
+  {
+    "kind": 0,
+    "start": 31327566,
+    "end": 31358991
+  },
+  {
+    "kind": 1,
+    "start": 31388182,
+    "end": 31408160
+  },
+  {
+    "kind": 0,
+    "start": 31378969,
+    "end": 31411737
+  },
+  {
+    "kind": 1,
+    "start": 31440928,
+    "end": 31461678
+  },
+  {
+    "kind": 0,
+    "start": 31432487,
+    "end": 31458541
+  },
+  {
+    "kind": 1,
+    "start": 31487732,
+    "end": 31512009
+  },
+  {
+    "kind": 0,
+    "start": 31482818,
+    "end": 31505408
+  },
+  {
+    "kind": 1,
+    "start": 31534599,
+    "end": 34724216
+  },
+  {
+    "kind": 0,
+    "start": 60181,
+    "end": 70758
+  },
+  {
+    "kind": 1,
+    "start": 34734793,
+    "end": 34938575
+  },
+  {
+    "kind": 0,
+    "start": 34902293,
+    "end": 34912924
+  },
+  {
+    "kind": 1,
+    "start": 34949206,
+    "end": 35053565
+  },
+  {
+    "kind": 0,
+    "start": 35017280,
+    "end": 35037755
+  },
+  {
+    "kind": 1,
+    "start": 35074040,
+    "end": 35099448
+  },
+  {
+    "kind": 0,
+    "start": 35063163,
+    "end": 35074014
+  },
+  {
+    "kind": 1,
+    "start": 35110299,
+    "end": 36042632
+  },
+  {
+    "kind": 0,
+    "start": 36107473,
+    "end": 36134979
+  },
+  {
+    "kind": 1,
+    "start": 36070138,
+    "end": 36092795
+  },
+  {
+    "kind": 0,
+    "start": 36157636,
+    "end": 36178535
+  },
+  {
+    "kind": 1,
+    "start": 36113694,
+    "end": 36131639
+  },
+  {
+    "kind": 0,
+    "start": 36196480,
+    "end": 36229248
+  },
+  {
+    "kind": 1,
+    "start": 36164407,
+    "end": 36276905
+  },
+  {
+    "kind": 0,
+    "start": 36341911,
+    "end": 36376302
+  },
+  {
+    "kind": 1,
+    "start": 36311296,
+    "end": 36435717
+  },
+  {
+    "kind": 0,
+    "start": 36500738,
+    "end": 36509962
+  },
+  {
+    "kind": 1,
+    "start": 36444941,
+    "end": 36477709
+  },
+  {
+    "kind": 0,
+    "start": 36542730,
+    "end": 36551042
+  },
+  {
+    "kind": 1,
+    "start": 36486021,
+    "end": 36576464
+  },
+  {
+    "kind": 0,
+    "start": 36641485,
+    "end": 36650011
+  },
+  {
+    "kind": 1,
+    "start": 36584990,
+    "end": 36617758
+  },
+  {
+    "kind": 0,
+    "start": 36682779,
+    "end": 36693789
+  },
+  {
+    "kind": 1,
+    "start": 36628768,
+    "end": 36714260
+  },
+  {
+    "kind": 0,
+    "start": 36779281,
+    "end": 36790056
+  },
+  {
+    "kind": 1,
+    "start": 36725035,
+    "end": 36822251
+  },
+  {
+    "kind": 0,
+    "start": 36887272,
+    "end": 36901449
+  },
+  {
+    "kind": 1,
+    "start": 36836428,
+    "end": 36875903
+  },
+  {
+    "kind": 0,
+    "start": 36940924,
+    "end": 36963171
+  },
+  {
+    "kind": 1,
+    "start": 36898150,
+    "end": 36963568
+  },
+  {
+    "kind": 0,
+    "start": 37028533,
+    "end": 37550533
+  },
+  {
+    "kind": 1,
+    "start": 37485568,
+    "end": 37585727
+  },
+  {
+    "kind": 0,
+    "start": 37650698,
+    "end": 56324681
+  },
+  {
+    "kind": 1,
+    "start": 56259710,
+    "end": 57760841
+  },
+  {
+    "kind": 0,
+    "start": 57825985,
+    "end": 117331903
+  },
+  {
+    "kind": 1,
+    "start": 117266759,
+    "end": 117523384
+  },
+  {
+    "kind": 0,
+    "start": 117588532,
+    "end": 117656816
+  },
+  {
+    "kind": 1,
+    "start": 117591668,
+    "end": 117743238
+  },
+  {
+    "kind": 0,
+    "start": 117808385,
+    "end": 120535085
+  },
+  {
+    "kind": 1,
+    "start": 120469938,
+    "end": 120490132
+  },
+  {
+    "kind": 0,
+    "start": 120555284,
+    "end": 123783890
+  },
+  {
+    "kind": 1,
+    "start": 123718738,
+    "end": 123739924
+  },
+  {
+    "kind": 0,
+    "start": 123805067,
+    "end": 123837835
+  },
+  {
+    "kind": 1,
+    "start": 123772692,
+    "end": 124256084
+  },
+  {
+    "kind": 0,
+    "start": 124321168,
+    "end": 125916164
+  },
+  {
+    "kind": 1,
+    "start": 125851080,
+    "end": 125876731
+  },
+  {
+    "kind": 0,
+    "start": 125941815,
+    "end": 126173247
+  },
+  {
+    "kind": 1,
+    "start": 126108163,
+    "end": 126287784
+  }
+]
+[2026-09-27 11:23:23.342] [info]               Full: 123,327.91 KB, To download: 24,699.73 KB (20%)
+[2026-09-27 11:23:23.348] [info]               Differential download: https://github.com/anomalyco/opencode/releases/download/v1.18.32/opencode-desktop-win-x64.exe
+[2026-09-27 11:23:23.349] [debug]              download range: bytes=0-15449
+[2026-09-27 11:23:23.607] [info]               Redirect to https://release-assets.githubusercontent.com/github-production-release-asset/975734319/5c261d2d-8863-4e28-be76-c7dd0d75d0af
+[2026-09-27 11:23:24.082] [debug]              download range: bytes=83675-126064
+[2026-09-27 11:23:24.569] [debug]              download range: bytes=216131-234921
+[2026-09-27 11:23:26.764] [debug]              download range: bytes=13195389-13301700
+[2026-09-27 11:23:27.905] [debug]              download range: bytes=13462664-26841096
+[2026-09-27 11:27:15.527] [debug]              download range: bytes=26875499-26888001
+[2026-09-27 11:27:16.708] [debug]              download range: bytes=26903707-26931642
+[2026-09-27 11:27:18.111] [debug]              download range: bytes=26964876-26990219
+[2026-09-27 11:27:22.318] [debug]              download range: bytes=27014342-27030884
+[2026-09-27 11:27:29.512] [debug]              download range: bytes=27047591-27080358
+[2026-09-27 11:27:36.580] [debug]              download range: bytes=27102106-27124871
+[2026-09-27 11:27:46.592] [debug]              download range: bytes=27147037-27179804
+[2026-09-27 11:27:50.463] [debug]              download range: bytes=27211838-27277373
+[2026-09-27 11:27:59.661] [debug]              download range: bytes=27311180-27322066
+[2026-09-27 11:28:00.488] [debug]              download range: bytes=27354835-27462498
+[2026-09-27 11:28:04.451] [debug]              download range: bytes=27497192-27522212
+[2026-09-27 11:28:05.497] [debug]              download range: bytes=27540530-27569714
+[2026-09-27 11:28:06.548] [debug]              download range: bytes=27583457-27606911
+[2026-09-27 11:28:07.550] [debug]              download range: bytes=27651177-27752734
+[2026-09-27 11:28:10.928] [debug]              download range: bytes=27775944-28158555
+[2026-09-27 11:28:44.152] [debug]              download range: bytes=28188682-30328643
+[2026-09-27 11:37:03.285] [error]              Cannot download differentially, fallback to full download: Error: net::ERR_CONNECTION_RESET
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:133608)
+    at SimpleURLLoaderWrapper.emit (node:events:509:28)
+[2026-09-27 11:37:21.370] [error]              Error: Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:133608)
+    at SimpleURLLoaderWrapper.emit (node:events:509:28)
+[2026-09-27 11:37:21.371] [info]               updater state changed { from: 'downloading', to: 'error' }
+[2026-09-27 11:43:02.177] [info]               updater state changed { from: 'error', to: 'checking' }
+[2026-09-27 11:43:02.178] [info]               Checking for update
+[2026-09-27 11:43:19.756] [info]               Found version 1.18.32 (url: opencode-desktop-win-arm64.exe, opencode-desktop-win-x64.exe)
+[2026-09-27 11:43:19.757] [info]               updater state changed { from: 'checking', to: 'downloading' }
+[2026-09-27 11:43:19.758] [info]               Downloading update from opencode-desktop-win-arm64.exe, opencode-desktop-win-x64.exe
+[2026-09-27 11:43:19.773] [warn]               disableWebInstaller is set to false, you should set it to true if you do not plan on using a web installer. This will default to true in a future version.
+[2026-09-27 11:43:19.774] [info]               Download block maps (old: "https://github.com/anomalyco/opencode/releases/download/v1.18.31/opencode-desktop-win-x64.exe.blockmap", new: https://github.com/anomalyco/opencode/releases/download/v1.18.32/opencode-desktop-win-x64.exe.blockmap)
+[2026-09-27 11:43:25.160] [debug]              Hx6xp8bVbnkicR6+6Zc+Uf/Q duplicated in blockmap (same size), it doesn't lead to broken differential downloader, just corresponding block will be skipped)
+[2026-09-27 11:43:25.169] [info]               File has 1212 changed blocks
+[2026-09-27 11:43:25.170] [debug]              [
+  {
+    "kind": 1,
+    "start": 0,
+    "end": 15450
+  },
+  {
+    "kind": 0,
+    "start": 15450,
+    "end": 83675
+  },
+  {
+    "kind": 1,
+    "start": 83675,
+    "end": 126065
+  },
+  {
+    "kind": 0,
+    "start": 126062,
+    "end": 216128
+  },
+  {
+    "kind": 1,
+    "start": 216131,
+    "end": 234922
+  },
+  {
+    "kind": 0,
+    "start": 234919,
+    "end": 13195386
+  },
+  {
+    "kind": 1,
+    "start": 13195389,
+    "end": 13301701
+  },
+  {
+    "kind": 0,
+    "start": 13301698,
+    "end": 13462661
+  },
+  {
+    "kind": 1,
+    "start": 13462664,
+    "end": 26841097
+  },
+  {
+    "kind": 0,
+    "start": 26810069,
+    "end": 26844471
+  },
+  {
+    "kind": 1,
+    "start": 26875499,
+    "end": 26888002
+  },
+  {
+    "kind": 0,
+    "start": 26856974,
+    "end": 26872679
+  },
+  {
+    "kind": 1,
+    "start": 26903707,
+    "end": 26931643
+  },
+  {
+    "kind": 0,
+    "start": 26900615,
+    "end": 26933848
+  },
+  {
+    "kind": 1,
+    "start": 26964876,
+    "end": 26990220
+  },
+  {
+    "kind": 0,
+    "start": 26959192,
+    "end": 26983314
+  },
+  {
+    "kind": 1,
+    "start": 27014342,
+    "end": 27030885
+  },
+  {
+    "kind": 0,
+    "start": 26999857,
+    "end": 27016563
+  },
+  {
+    "kind": 1,
+    "start": 27047591,
+    "end": 27080359
+  },
+  {
+    "kind": 0,
+    "start": 27049331,
+    "end": 27071078
+  },
+  {
+    "kind": 1,
+    "start": 27102106,
+    "end": 27124872
+  },
+  {
+    "kind": 0,
+    "start": 27093844,
+    "end": 27116009
+  },
+  {
+    "kind": 1,
+    "start": 27147037,
+    "end": 27179805
+  },
+  {
+    "kind": 0,
+    "start": 27148777,
+    "end": 27180810
+  },
+  {
+    "kind": 1,
+    "start": 27211838,
+    "end": 27277374
+  },
+  {
+    "kind": 0,
+    "start": 27246346,
+    "end": 27280152
+  },
+  {
+    "kind": 1,
+    "start": 27311180,
+    "end": 27322067
+  },
+  {
+    "kind": 0,
+    "start": 27291039,
+    "end": 27323807
+  },
+  {
+    "kind": 1,
+    "start": 27354835,
+    "end": 27462499
+  },
+  {
+    "kind": 0,
+    "start": 27431471,
+    "end": 27466164
+  },
+  {
+    "kind": 1,
+    "start": 27497192,
+    "end": 27522213
+  },
+  {
+    "kind": 0,
+    "start": 27491185,
+    "end": 27509502
+  },
+  {
+    "kind": 1,
+    "start": 27540530,
+    "end": 27569715
+  },
+  {
+    "kind": 0,
+    "start": 27538687,
+    "end": 27552429
+  },
+  {
+    "kind": 1,
+    "start": 27583457,
+    "end": 27606912
+  },
+  {
+    "kind": 0,
+    "start": 27575884,
+    "end": 27620149
+  },
+  {
+    "kind": 1,
+    "start": 27651177,
+    "end": 27752735
+  },
+  {
+    "kind": 0,
+    "start": 27721702,
+    "end": 27744911
+  },
+  {
+    "kind": 1,
+    "start": 27775944,
+    "end": 28158556
+  },
+  {
+    "kind": 0,
+    "start": 28127448,
+    "end": 28157574
+  },
+  {
+    "kind": 1,
+    "start": 28188682,
+    "end": 30328644
+  },
+  {
+    "kind": 0,
+    "start": 30299453,
+    "end": 30324472
+  },
+  {
+    "kind": 1,
+    "start": 30353663,
+    "end": 30386431
+  },
+  {
+    "kind": 0,
+    "start": 30357240,
+    "end": 30386512
+  },
+  {
+    "kind": 1,
+    "start": 30415703,
+    "end": 30438996
+  },
+  {
+    "kind": 0,
+    "start": 30409805,
+    "end": 30435262
+  },
+  {
+    "kind": 1,
+    "start": 30464453,
+    "end": 30482035
+  },
+  {
+    "kind": 0,
+    "start": 30452844,
+    "end": 30462581
+  },
+  {
+    "kind": 1,
+    "start": 30491772,
+    "end": 30519620
+  },
+  {
+    "kind": 0,
+    "start": 30490429,
+    "end": 30530665
+  },
+  {
+    "kind": 1,
+    "start": 30559856,
+    "end": 30592624
+  },
+  {
+    "kind": 0,
+    "start": 30563433,
+    "end": 30576348
+  },
+  {
+    "kind": 1,
+    "start": 30605539,
+    "end": 30638307
+  },
+  {
+    "kind": 0,
+    "start": 30609116,
+    "end": 30624254
+  },
+  {
+    "kind": 1,
+    "start": 30653445,
+    "end": 30666602
+  },
+  {
+    "kind": 0,
+    "start": 30637411,
+    "end": 30653531
+  },
+  {
+    "kind": 1,
+    "start": 30682722,
+    "end": 30709059
+  },
+  {
+    "kind": 0,
+    "start": 30679868,
+    "end": 30695060
+  },
+  {
+    "kind": 1,
+    "start": 30724251,
+    "end": 30757019
+  },
+  {
+    "kind": 0,
+    "start": 30727828,
+    "end": 30764991
+  },
+  {
+    "kind": 1,
+    "start": 30794182,
+    "end": 30813393
+  },
+  {
+    "kind": 0,
+    "start": 30784202,
+    "end": 30822318
+  },
+  {
+    "kind": 1,
+    "start": 30851509,
+    "end": 31015237
+  },
+  {
+    "kind": 0,
+    "start": 30986043,
+    "end": 31015201
+  },
+  {
+    "kind": 1,
+    "start": 31044395,
+    "end": 31071193
+  },
+  {
+    "kind": 0,
+    "start": 31042002,
+    "end": 31074770
+  },
+  {
+    "kind": 1,
+    "start": 31103961,
+    "end": 31116285
+  },
+  {
+    "kind": 0,
+    "start": 31087094,
+    "end": 31095406
+  },
+  {
+    "kind": 1,
+    "start": 31124597,
+    "end": 31356757
+  },
+  {
+    "kind": 0,
+    "start": 31327566,
+    "end": 31358991
+  },
+  {
+    "kind": 1,
+    "start": 31388182,
+    "end": 31408160
+  },
+  {
+    "kind": 0,
+    "start": 31378969,
+    "end": 31411737
+  },
+  {
+    "kind": 1,
+    "start": 31440928,
+    "end": 31461678
+  },
+  {
+    "kind": 0,
+    "start": 31432487,
+    "end": 31458541
+  },
+  {
+    "kind": 1,
+    "start": 31487732,
+    "end": 31512009
+  },
+  {
+    "kind": 0,
+    "start": 31482818,
+    "end": 31505408
+  },
+  {
+    "kind": 1,
+    "start": 31534599,
+    "end": 34724216
+  },
+  {
+    "kind": 0,
+    "start": 60181,
+    "end": 70758
+  },
+  {
+    "kind": 1,
+    "start": 34734793,
+    "end": 34938575
+  },
+  {
+    "kind": 0,
+    "start": 34902293,
+    "end": 34912924
+  },
+  {
+    "kind": 1,
+    "start": 34949206,
+    "end": 35053565
+  },
+  {
+    "kind": 0,
+    "start": 35017280,
+    "end": 35037755
+  },
+  {
+    "kind": 1,
+    "start": 35074040,
+    "end": 35099448
+  },
+  {
+    "kind": 0,
+    "start": 35063163,
+    "end": 35074014
+  },
+  {
+    "kind": 1,
+    "start": 35110299,
+    "end": 36042632
+  },
+  {
+    "kind": 0,
+    "start": 36107473,
+    "end": 36134979
+  },
+  {
+    "kind": 1,
+    "start": 36070138,
+    "end": 36092795
+  },
+  {
+    "kind": 0,
+    "start": 36157636,
+    "end": 36178535
+  },
+  {
+    "kind": 1,
+    "start": 36113694,
+    "end": 36131639
+  },
+  {
+    "kind": 0,
+    "start": 36196480,
+    "end": 36229248
+  },
+  {
+    "kind": 1,
+    "start": 36164407,
+    "end": 36276905
+  },
+  {
+    "kind": 0,
+    "start": 36341911,
+    "end": 36376302
+  },
+  {
+    "kind": 1,
+    "start": 36311296,
+    "end": 36435717
+  },
+  {
+    "kind": 0,
+    "start": 36500738,
+    "end": 36509962
+  },
+  {
+    "kind": 1,
+    "start": 36444941,
+    "end": 36477709
+  },
+  {
+    "kind": 0,
+    "start": 36542730,
+    "end": 36551042
+  },
+  {
+    "kind": 1,
+    "start": 36486021,
+    "end": 36576464
+  },
+  {
+    "kind": 0,
+    "start": 36641485,
+    "end": 36650011
+  },
+  {
+    "kind": 1,
+    "start": 36584990,
+    "end": 36617758
+  },
+  {
+    "kind": 0,
+    "start": 36682779,
+    "end": 36693789
+  },
+  {
+    "kind": 1,
+    "start": 36628768,
+    "end": 36714260
+  },
+  {
+    "kind": 0,
+    "start": 36779281,
+    "end": 36790056
+  },
+  {
+    "kind": 1,
+    "start": 36725035,
+    "end": 36822251
+  },
+  {
+    "kind": 0,
+    "start": 36887272,
+    "end": 36901449
+  },
+  {
+    "kind": 1,
+    "start": 36836428,
+    "end": 36875903
+  },
+  {
+    "kind": 0,
+    "start": 36940924,
+    "end": 36963171
+  },
+  {
+    "kind": 1,
+    "start": 36898150,
+    "end": 36963568
+  },
+  {
+    "kind": 0,
+    "start": 37028533,
+    "end": 37550533
+  },
+  {
+    "kind": 1,
+    "start": 37485568,
+    "end": 37585727
+  },
+  {
+    "kind": 0,
+    "start": 37650698,
+    "end": 56324681
+  },
+  {
+    "kind": 1,
+    "start": 56259710,
+    "end": 57760841
+  },
+  {
+    "kind": 0,
+    "start": 57825985,
+    "end": 117331903
+  },
+  {
+    "kind": 1,
+    "start": 117266759,
+    "end": 117523384
+  },
+  {
+    "kind": 0,
+    "start": 117588532,
+    "end": 117656816
+  },
+  {
+    "kind": 1,
+    "start": 117591668,
+    "end": 117743238
+  },
+  {
+    "kind": 0,
+    "start": 117808385,
+    "end": 120535085
+  },
+  {
+    "kind": 1,
+    "start": 120469938,
+    "end": 120490132
+  },
+  {
+    "kind": 0,
+    "start": 120555284,
+    "end": 123783890
+  },
+  {
+    "kind": 1,
+    "start": 123718738,
+    "end": 123739924
+  },
+  {
+    "kind": 0,
+    "start": 123805067,
+    "end": 123837835
+  },
+  {
+    "kind": 1,
+    "start": 123772692,
+    "end": 124256084
+  },
+  {
+    "kind": 0,
+    "start": 124321168,
+    "end": 125916164
+  },
+  {
+    "kind": 1,
+    "start": 125851080,
+    "end": 125876731
+  },
+  {
+    "kind": 0,
+    "start": 125941815,
+    "end": 126173247
+  },
+  {
+    "kind": 1,
+    "start": 126108163,
+    "end": 126287784
+  }
+]
+[2026-09-27 11:43:25.171] [info]               Full: 123,327.91 KB, To download: 24,699.73 KB (20%)
+[2026-09-27 11:43:25.184] [info]               Differential download: https://github.com/anomalyco/opencode/releases/download/v1.18.32/opencode-desktop-win-x64.exe
+[2026-09-27 11:43:25.185] [debug]              download range: bytes=0-15449
+[2026-09-27 11:43:25.796] [info]               Redirect to https://release-assets.githubusercontent.com/github-production-release-asset/975734319/5c261d2d-8863-4e28-be76-c7dd0d75d0af
+[2026-09-27 11:43:26.426] [debug]              download range: bytes=83675-126064
+[2026-09-27 11:43:27.138] [debug]              download range: bytes=216131-234921
+[2026-09-27 11:43:28.336] [debug]              download range: bytes=13195389-13301700
+[2026-09-27 11:43:32.974] [debug]              download range: bytes=13462664-26841096
+[2026-09-27 11:45:11.281] [debug]              download range: bytes=26875499-26888001
+[2026-09-27 11:45:11.692] [debug]              download range: bytes=26903707-26931642
+[2026-09-27 11:45:12.308] [debug]              download range: bytes=26964876-26990219
+[2026-09-27 11:45:13.223] [debug]              download range: bytes=27014342-27030884
+[2026-09-27 11:45:13.796] [debug]              download range: bytes=27047591-27080358
+[2026-09-27 11:45:14.202] [debug]              download range: bytes=27102106-27124871
+[2026-09-27 11:45:14.552] [debug]              download range: bytes=27147037-27179804
+[2026-09-27 11:45:15.072] [debug]              download range: bytes=27211838-27277373
+[2026-09-27 11:45:15.895] [debug]              download range: bytes=27311180-27322066
+[2026-09-27 11:45:16.798] [debug]              download range: bytes=27354835-27462498
+[2026-09-27 11:45:18.542] [debug]              download range: bytes=27497192-27522212
+[2026-09-27 11:45:19.143] [debug]              download range: bytes=27540530-27569714
+[2026-09-27 11:45:19.913] [debug]              download range: bytes=27583457-27606911
+[2026-09-27 11:45:20.713] [debug]              download range: bytes=27651177-27752734
+[2026-09-27 11:45:23.057] [debug]              download range: bytes=27775944-28158555
+[2026-09-27 11:45:29.678] [debug]              download range: bytes=28188682-30328643
+[2026-09-27 11:46:11.325] [debug]              download range: bytes=30353663-30386430
+[2026-09-27 11:46:12.213] [debug]              download range: bytes=30415703-30438995
+[2026-09-27 11:46:12.769] [debug]              download range: bytes=30464453-30482034
+[2026-09-27 11:46:13.201] [debug]              download range: bytes=30491772-30519619
+[2026-09-27 11:46:13.940] [debug]              download range: bytes=30559856-30592623
+[2026-09-27 11:46:14.468] [debug]              download range: bytes=30605539-30638306
+[2026-09-27 11:46:15.476] [debug]              download range: bytes=30653445-30666601
+[2026-09-27 11:46:15.858] [debug]              download range: bytes=30682722-30709058
+[2026-09-27 11:46:16.559] [debug]              download range: bytes=30724251-30757018
+[2026-09-27 11:46:17.727] [debug]              download range: bytes=30794182-30813392
+[2026-09-27 11:46:18.185] [debug]              download range: bytes=30851509-31015236
+[2026-09-27 11:46:20.745] [debug]              download range: bytes=31044395-31071192
+[2026-09-27 11:46:21.346] [debug]              download range: bytes=31103961-31116284
+[2026-09-27 11:46:21.890] [debug]              download range: bytes=31124597-31356756
+[2026-09-27 11:46:26.245] [debug]              download range: bytes=31388182-31408159
+[2026-09-27 11:46:26.943] [debug]              download range: bytes=31440928-31461677
+[2026-09-27 11:46:27.749] [debug]              download range: bytes=31487732-31512008
+[2026-09-27 11:46:28.524] [debug]              download range: bytes=31534599-34724215
+[2026-09-27 11:47:27.054] [debug]              download range: bytes=34734793-34938574
+[2026-09-27 11:47:32.154] [debug]              download range: bytes=34949206-35053564
+[2026-09-27 11:47:36.513] [debug]              download range: bytes=35074040-35099447
+[2026-09-27 11:47:36.987] [debug]              download range: bytes=35110299-36042631
+[2026-09-27 11:48:18.777] [debug]              download range: bytes=36070138-36092794
+[2026-09-27 11:48:21.301] [debug]              download range: bytes=36113694-36131638
+[2026-09-27 11:48:35.602] [debug]              download range: bytes=36164407-36276904
+[2026-09-27 11:48:40.821] [debug]              download range: bytes=36311296-36435716
+[2026-09-27 11:48:49.594] [debug]              download range: bytes=36444941-36477708
+[2026-09-27 11:48:54.296] [debug]              download range: bytes=36486021-36576463
+[2026-09-27 11:49:16.257] [debug]              download range: bytes=36584990-36617757
+[2026-09-27 11:49:17.566] [debug]              download range: bytes=36628768-36714259
+[2026-09-27 11:49:21.458] [debug]              download range: bytes=36725035-36822250
+[2026-09-27 11:49:24.508] [debug]              download range: bytes=36836428-36875902
+[2026-09-27 11:49:26.512] [debug]              download range: bytes=36898150-36963567
+[2026-09-27 11:49:28.432] [debug]              download range: bytes=37485568-37585726
+[2026-09-27 11:49:30.826] [debug]              download range: bytes=56259710-57760840
+[2026-09-27 11:49:59.672] [debug]              download range: bytes=117266759-117523383
+[2026-09-27 11:50:01.093] [debug]              download range: bytes=117591668-117743237
+[2026-09-27 11:50:02.274] [debug]              download range: bytes=120469938-120490131
+[2026-09-27 11:50:02.697] [debug]              download range: bytes=123718738-123739923
+[2026-09-27 11:50:03.060] [debug]              download range: bytes=123772692-124256083
+[2026-09-27 11:50:06.135] [debug]              download range: bytes=125851080-125876730
+[2026-09-27 11:50:06.624] [debug]              download range: bytes=126108163-126287783
+[2026-09-27 11:50:08.241] [info]               New version 1.18.32 has been downloaded to C:\Users\Muhibudeen\AppData\Local\@opencode-aidesktop-updater\pending\opencode-desktop-win-x64.exe
+[2026-09-27 11:50:08.282] [info]               updater state changed { from: 'downloading', to: 'ready' }

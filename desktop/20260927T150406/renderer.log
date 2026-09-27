@@ -1,0 +1,4 @@
+[2026-09-27 16:04:16.501] [info]            Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: oc://renderer/assets/Inter.ttf
+[2026-09-27 16:04:27.158] [error]              ResizeObserver loop completed with undelivered notifications.
+[2026-09-27 16:04:32.174] [error]              ResizeObserver loop completed with undelivered notifications.
+[2026-09-27 18:05:11.971] [error]              ResizeObserver loop completed with undelivered notifications.
