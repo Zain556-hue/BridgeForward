@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:design_system/design_system.dart';
 import '../discover/discover_store.dart';
+import '../trust/trust_sheet.dart';
 
 /// Post page + 4 safe buttons. No personal info shown.
 /// Tap writes an interest row + tells owner (net part in Phase 7).
@@ -40,6 +41,12 @@ class _OpportunityDetailScreenState extends ConsumerState<OpportunityDetailScree
           BridgeSecondaryButton(label: 'Connect', onPressed: () => _send('connect')),
           BridgeTertiaryButton(label: 'Ask for deal info', onPressed: () => _send('info_request')),
           BridgeTertiaryButton(label: 'Ask to work together', onPressed: () => _send('collab_request')),
+          TextButton.icon(
+            onPressed: () => showModalBottomSheet(
+                context: context, builder: (_) => TrustSheet(listingTitle: l.title)),
+            icon: const Icon(Icons.flag_outlined, color: BridgeColors.muted),
+            label: const Text('Report / Safety', style: TextStyle(color: BridgeColors.muted)),
+          ),
         ],
       ),
     );

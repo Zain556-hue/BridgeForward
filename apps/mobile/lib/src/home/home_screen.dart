@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:design_system/design_system.dart';
 import '../media/pick_screen.dart';
 import '../dashboard/dashboard_screen.dart';
+import '../search/search_screen.dart';
+import '../notifications/notifications_screen.dart';
 
 /// Home tab: big entry to Media Core.
 class HomeScreen extends StatelessWidget {
@@ -28,6 +30,17 @@ class HomeScreen extends StatelessWidget {
             label: 'My activity',
             onPressed: () => Navigator.push(
                 context, MaterialPageRoute(builder: (_) => const DashboardScreen())),
+          ),
+          const SizedBox(height: 8),
+          BridgeSecondaryButton(
+            label: 'Search posts',
+            onPressed: () => Navigator.push(
+                context, MaterialPageRoute(builder: (_) => const SearchScreen())),
+          ),
+          BridgeTertiaryButton(
+            label: 'Alerts →',
+            onPressed: () => Navigator.push(
+                context, MaterialPageRoute(builder: (_) => const NotificationsScreen())),
           ),
         ],
       ),
