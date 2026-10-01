@@ -4,6 +4,7 @@ import 'package:design_system/design_system.dart';
 import '../auth/auth_repository.dart';
 import '../auth/auth_sheet.dart';
 import '../opps/my_listings_screen.dart';
+import '../premium/paywall_screen.dart';
 import 'settings_screen.dart';
 
 /// Profile (PRD §9): name, photo, tabs as placeholders to later phases.
@@ -53,6 +54,11 @@ class ProfileScreen extends ConsumerWidget {
             label: 'My listings →',
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (_) => const MyListingsScreen())),
+          ),
+          BridgeTertiaryButton(
+            label: 'Go Premium →',
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const PaywallScreen())),
           ),
         ],
       ),
