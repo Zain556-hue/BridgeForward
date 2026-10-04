@@ -32,6 +32,6 @@ class PickScreen extends ConsumerWidget {
 
   void _fakePick(BuildContext context, String from) {
     // Real image_picker + receive_sharing_intent wired after SDK ready.
-    Navigator.push(context, MaterialPageRoute(builder: (_) => const PrepareScreen()));
+    Navigator.pushNamed(context, '/prepare');
   }
 }

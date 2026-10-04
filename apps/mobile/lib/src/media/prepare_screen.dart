@@ -24,8 +24,7 @@ class _PrepareScreenState extends State<PrepareScreen> {
       setState(() => _p = i / 5);
     }
     if (!mounted) return;
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (_) => const PreviewScreen()));
+    Navigator.pushNamed(context, '/preview');
   }
 
   @override
