@@ -1,0 +1,34 @@
+name: deploy-netlify
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: netlify-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Package site
+        run: cd site && zip -r ../site.zip .
+
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          set -euo pipefail
+          resp=$(curl -sS -f -X POST \
+            -H "Authorization: Bearer ${NETLIFY_AUTH_TOKEN}" \
+            -H "Content-Type: application/zip" \
+            --data-binary @site.zip \
+            "https://api.netlify.com/api/v1/sites/${NETLIFY_SITE_ID}/deploys")
+          echo "$resp"
+          id=$(echo "$resp" | python3 -c "import sys,json;print(json.load(sys.stdin)['id'])")
+          echo "Deploy: https://app.netlify.com/sites/bridgeforward-media/deploys/$id"

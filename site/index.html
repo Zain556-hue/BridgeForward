@@ -46,6 +46,8 @@ h1 .grad{background:linear-gradient(120deg,var(--primary),var(--accent)); -webki
 .btn-primary:hover{transform:translateY(-2px); box-shadow:0 12px 28px rgba(34,197,94,.4)}
 .btn-ghost{background:none; color:var(--primary); font-size:16px; padding:10px 16px}
 .btn-ghost:hover{background:var(--primary-tint)}
+.btn-dark{background:var(--primary); color:#fff; font-size:16px; padding:15px 26px}
+.btn-dark:hover{background:var(--primary-dark)}
 .trust{font-size:13px; color:var(--muted); margin-top:14px}
 
 section{padding:56px 0}
@@ -58,14 +60,7 @@ h2{font-size:clamp(24px,3.4vw,32px); letter-spacing:-.01em; margin:0 0 8px; text
 .step p{margin:0; color:var(--muted); font-size:15px}
 
 .waitlist{background:var(--paper); border:1px solid var(--line); border-radius:24px; padding:40px 28px; text-align:center; box-shadow:0 18px 44px rgba(10,22,40,.06)}
-.form{display:flex; gap:10px; max-width:520px; margin:22px auto 0; flex-wrap:wrap; justify-content:center}
-.form input[type=email]{flex:1 1 260px; min-width:0; font:inherit; font-size:16px; padding:15px 16px; border:1px solid var(--line); border-radius:12px; background:var(--bg); color:var(--ink)}
-.form input[type=email]:focus{outline:2px solid var(--primary); outline-offset:1px; border-color:transparent}
-.btn-dark{background:var(--primary); color:#fff; font-size:16px; padding:15px 26px}
-.btn-dark:hover{background:var(--primary-dark)}
 .form-note{font-size:13px; color:var(--muted); margin-top:14px}
-.ok{display:none; margin-top:16px; font-weight:700; color:var(--success)}
-.ok.show{display:block}
 
 footer{border-top:1px solid var(--line); padding:28px 0; color:var(--muted); font-size:14px}
 .foot{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center}
@@ -141,14 +136,10 @@ footer{border-top:1px solid var(--line); padding:28px 0; color:var(--muted); fon
       <div class="waitlist">
         <h2>Be first to preserve your media</h2>
         <p class="lead" style="margin-bottom:0">Drop your email and we'll let you know the moment BridgeForward is ready for you.</p>
-        <form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form" id="waitlist-form">
-          <input type="hidden" name="form-name" value="waitlist">
-          <p class="hidden" style="position:absolute;left:-9999px"><label>Don't fill this out: <input name="bot-field"></label></p>
-          <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
-          <button class="btn btn-dark" type="submit">Join the waitlist</button>
-        </form>
-        <p class="form-note">We only email about launch. No spam, unsubscribe anytime.</p>
-        <p class="ok" id="waitlist-ok">Thanks — you're on the list.</p>
+        <div class="cta-row" style="margin-top:22px">
+          <a class="btn btn-dark" id="waitlist-mail" href="mailto:zmuhibudeen@gmail.com?subject=BridgeForward%20waitlist&amp;body=Please%20add%20me%20to%20the%20BridgeForward%20waitlist.">Join the waitlist</a>
+        </div>
+        <p class="form-note">Opens your email app with a ready-made message. We only email about launch — no spam, unsubscribe anytime.</p>
       </div>
     </div>
   </section>
@@ -163,20 +154,6 @@ footer{border-top:1px solid var(--line); padding:28px 0; color:var(--muted); fon
 
 <script>
 document.getElementById('y').textContent = new Date().getFullYear();
-var form = document.getElementById('waitlist-form');
-if (form) {
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var data = new URLSearchParams(new FormData(form)).toString();
-    fetch(form.action || '/', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      body: data
-    }).catch(function () {});
-    form.style.display = 'none';
-    document.getElementById('waitlist-ok').classList.add('show');
-  });
-}
 </script>
 </body>
 </html>
