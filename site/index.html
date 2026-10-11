@@ -8,7 +8,14 @@
 <meta property="og:title" content="BridgeForward — Share Photos &amp; Videos Without Losing Quality">
 <meta property="og:description" content="WhatsApp compresses your media. BridgeForward prepares it so what you send looks as good as the original.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232B4EFF'/%3E%3Cpath d='M22 42V22h9a7 7 0 0 1 0 14h-9m0 0h10a7 7 0 0 1 0 14H22' stroke='%23fff' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="/icons/icon-192.png" type="image/png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#2B4EFF">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="BridgeForward">
 <style>
 :root{
   --primary:#2B4EFF; --primary-dark:#162DA8; --primary-tint:#E8EDFF;
@@ -49,6 +56,16 @@ h1 .grad{background:linear-gradient(120deg,var(--primary),var(--accent)); -webki
 .btn-dark{background:var(--primary); color:#fff; font-size:16px; padding:15px 26px}
 .btn-dark:hover{background:var(--primary-dark)}
 .trust{font-size:13px; color:var(--muted); margin-top:14px}
+#install-banner{display:none;background:var(--ink);color:#fff;border-radius:14px;padding:16px 18px;margin:18px auto 0;max-width:640px;text-align:left}
+#install-banner p{margin:0 0 10px;font-size:14px}
+#install-banner .row{display:flex;gap:10px;flex-wrap:wrap}
+#install-ios{display:none;font-size:13px;opacity:.9;margin:8px 0 0}
+.waitlist-form{display:flex;gap:10px;max-width:520px;margin:22px auto 0;flex-wrap:wrap;justify-content:center}
+.waitlist-form input[type=email]{flex:1 1 240px;min-width:0;font:inherit;font-size:16px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+.waitlist-form input[type=email]:focus{outline:2px solid var(--primary);outline-offset:1px;border-color:transparent}
+#wl-status{font-size:14px;margin:12px 0 0;min-height:22px}
+#wl-status.ok{color:var(--success);font-weight:700}
+#wl-status.err{color:#DC2626;font-weight:700}
 
 section{padding:56px 0}
 h2{font-size:clamp(24px,3.4vw,32px); letter-spacing:-.01em; margin:0 0 8px; text-align:center}
@@ -80,8 +97,9 @@ footer{border-top:1px solid var(--line); padding:28px 0; color:var(--muted); fon
     <a class="brand" href="/"><span class="mark">B</span> BridgeForward</a>
     <nav class="nav">
       <a href="#how">How it works</a>
+      <a href="/editor.html">Editor</a>
       <a href="#waitlist">Waitlist</a>
-      <a class="btn btn-dark nav-cta" href="#waitlist" style="padding:10px 18px; font-size:14px">Get early access</a>
+      <a class="btn btn-dark nav-cta" href="/editor.html" style="padding:10px 18px; font-size:14px">Try the editor</a>
     </nav>
   </div>
 </header>
@@ -100,10 +118,18 @@ footer{border-top:1px solid var(--line); padding:28px 0; color:var(--muted); fon
       </div>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="#waitlist">Preserve My Media &rarr;</a>
+        <a class="btn btn-primary" href="/editor.html">Preserve My Media &rarr;</a>
         <a class="btn btn-ghost" href="#waitlist">Get Started — It's Free</a>
       </div>
       <p class="trust">No account needed to try. Your files stay on your device.</p>
+      <div id="install-banner" role="region" aria-label="Install BridgeForward">
+        <p><strong>Install BridgeForward</strong> for one-tap access, just like a native app.</p>
+        <div class="row">
+          <button class="btn btn-dark" id="install-btn" type="button" style="padding:10px 18px;font-size:14px">Install BridgeForward</button>
+          <button class="btn btn-ghost" id="install-dismiss" type="button" style="padding:10px 18px;font-size:14px;background:#22314d;color:#fff">Not now</button>
+        </div>
+        <p id="install-ios">iPhone / iPad: open this page in <strong>Safari</strong>, tap <strong>Share</strong>, then <strong>Add to Home Screen</strong>.</p>
+      </div>
     </div>
   </section>
 
@@ -136,10 +162,12 @@ footer{border-top:1px solid var(--line); padding:28px 0; color:var(--muted); fon
       <div class="waitlist">
         <h2>Be first to preserve your media</h2>
         <p class="lead" style="margin-bottom:0">Drop your email and we'll let you know the moment BridgeForward is ready for you.</p>
-        <div class="cta-row" style="margin-top:22px">
-          <a class="btn btn-dark" id="waitlist-mail" href="mailto:zmuhibudeen@gmail.com?subject=BridgeForward%20waitlist&amp;body=Please%20add%20me%20to%20the%20BridgeForward%20waitlist.">Join the waitlist</a>
-        </div>
-        <p class="form-note">Opens your email app with a ready-made message. We only email about launch — no spam, unsubscribe anytime.</p>
+        <form class="waitlist-form" id="waitlist-form" novalidate>
+          <input type="email" id="wl-email" placeholder="you@example.com" required aria-label="Email address" autocomplete="email">
+          <button class="btn btn-dark" id="wl-btn" type="submit">Join the waitlist</button>
+        </form>
+        <p id="wl-status" aria-live="polite"></p>
+        <p class="form-note">We only email about launch. No spam, unsubscribe anytime. Prefer email? <a href="mailto:zmuhibudeen@gmail.com?subject=BridgeForward%20waitlist">Contact us directly</a>.</p>
       </div>
     </div>
   </section>
@@ -148,12 +176,45 @@ footer{border-top:1px solid var(--line); padding:28px 0; color:var(--muted); fon
 <footer>
   <div class="wrap foot">
     <span>&copy; <span id="y">2026</span> BridgeForward</span>
-    <span><a href="/">Home</a> · <a href="#waitlist">Waitlist</a></span>
+    <span><a href="/">Home</a> · <a href="/editor.html">Editor</a> · <a href="#waitlist">Waitlist</a></span>
   </div>
 </footer>
 
+<script src="/app.js"></script>
 <script>
-document.getElementById('y').textContent = new Date().getFullYear();
+(function () {
+  'use strict';
+  BF.registerSW();
+  BF.initInstall({ bannerId: 'install-banner', installBtnId: 'install-btn', dismissId: 'install-dismiss', iosId: 'install-ios' });
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  var form = document.getElementById('waitlist-form');
+  var email = document.getElementById('wl-email');
+  var btn = document.getElementById('wl-btn');
+  var status = document.getElementById('wl-status');
+
+  function say(msg, cls) { status.textContent = msg; status.className = cls || ''; }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!BF.getConfig().ready) {
+      say('The signup backend is not connected on this device yet — please use “Contact us directly” below for now.', 'err');
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Joining…';
+    say('', '');
+    BF.joinWaitlist(email.value).then(function () {
+      say('Thanks — you are on the list.', 'ok');
+      form.reset();
+    }).catch(function (err) {
+      say(err && err.message ? err.message : 'Could not join the waitlist.', 'err');
+    }).then(function () {
+      btn.disabled = false;
+      btn.textContent = 'Join the waitlist';
+    });
+  });
+})();
 </script>
 </body>
 </html>

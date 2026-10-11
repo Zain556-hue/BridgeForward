@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BridgeForward — Edit &amp; Enhance</title>
+<meta name="description" content="Upload a photo, describe the change in plain English, download it ready for WhatsApp.">
+<meta name="theme-color" content="#2B4EFF">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="BridgeForward">
+<style>
+:root{
+  --primary:#2B4EFF; --primary-dark:#162DA8; --primary-tint:#E8EDFF;
+  --accent:#00C896; --whatsapp:#22C55E; --whatsapp-on:#053B1A;
+  --ink:#0A1628; --muted:#4B5B74; --paper:#FFFFFF; --bg:#F6F8FF;
+  --line:#E2E8F5; --success:#16A34A; --danger:#DC2626;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:rgba(246,248,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--ink);text-decoration:none}
+.mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-size:17px}
+.nav{display:flex;align-items:center;gap:20px}
+.nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600}
+.nav a:hover{color:var(--primary)}
+main{padding:28px 0 56px}
+h1{font-size:clamp(26px,4vw,36px);margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 20px;max-width:64ch}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}
+.card h2{font-size:18px;margin:0 0 10px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+input[type=text],input[type=url],input[type=password],input[type=file]{font:inherit}
+input[type=text],input[type=url],input[type=password]{flex:1 1 220px;min-width:0;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+input:focus{outline:2px solid var(--primary);outline-offset:1px;border-color:transparent}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font:inherit;font-weight:800;border-radius:12px;text-decoration:none;padding:13px 22px;font-size:16px}
+.btn-dark{background:var(--primary);color:#fff}
+.btn-dark:hover{background:var(--primary-dark)}
+.btn-dark:disabled{opacity:.55;cursor:wait}
+.btn-wa{background:var(--whatsapp);color:var(--whatsapp-on)}
+.btn-ghost{background:var(--primary-tint);color:var(--primary-dark)}
+.btn-ghost:hover{background:#dbe4ff}
+.muted{color:var(--muted);font-size:14px}
+.small{font-size:13px}
+.ok{color:var(--success);font-weight:700}
+.err{color:var(--danger);font-weight:700}
+#install-banner{display:none;background:var(--ink);color:#fff;border-radius:14px;padding:14px 16px;margin-bottom:16px}
+#install-banner .row{justify-content:space-between}
+#install-banner p{margin:0 0 8px;font-size:14px}
+#install-ios{display:none;font-size:13px;opacity:.9;margin-top:8px}
+#drop{border:2px dashed var(--line);border-radius:14px;padding:26px;text-align:center;background:var(--bg);cursor:pointer}
+#drop.over{border-color:var(--primary);background:var(--primary-tint)}
+.preview{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:14px}
+.preview figure{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.preview img{display:block;width:100%;height:auto}
+.preview figcaption{padding:10px 12px;font-size:13px;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.pill{background:var(--primary-tint);color:var(--primary-dark);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{border:1px solid rgba(43,78,255,.3);background:var(--primary-tint);color:var(--primary-dark);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:700;cursor:pointer;font:inherit}
+.chip:hover{background:#dbe4ff}
+.history{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.history img{width:64px;height:64px;object-fit:cover;border-radius:10px;border:2px solid transparent;cursor:pointer}
+.history img.cur{border-color:var(--primary)}
+details.conn summary{cursor:pointer;font-weight:700;color:var(--primary-dark)}
+details.conn{font-size:14px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:14px}
+.foot{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+.foot a{color:var(--muted)}
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:-3px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:640px){.btn{width:100%}.row .btn{width:100%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="/"><span class="mark">B</span> BridgeForward</a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/editor.html" aria-current="page">Editor</a>
+      <a href="/#waitlist">Waitlist</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="install-banner" role="region" aria-label="Install BridgeForward">
+    <p><strong>Install BridgeForward</strong> for one-tap access, just like a native app.</p>
+    <div class="row">
+      <button class="btn btn-dark" id="install-btn" type="button" style="padding:10px 18px;font-size:14px">Install BridgeForward</button>
+      <button class="btn btn-ghost" id="install-dismiss" type="button" style="padding:10px 18px;font-size:14px">Not now</button>
+    </div>
+    <div id="install-ios">iPhone / iPad: open this page in <strong>Safari</strong>, tap <strong>Share</strong>, then <strong>Add to Home Screen</strong>.</div>
+  </div>
+
+  <h1>Edit &amp; Enhance</h1>
+  <p class="sub">Upload a photo, describe the change in plain English, then download it ready for WhatsApp. Each instruction builds on the last result.</p>
+
+  <div class="card">
+    <details class="conn" id="conn-box">
+      <summary>Backend connection</summary>
+      <p class="muted">The editor calls your deployed Supabase Edge Function. Paste the project URL and anon key once — they stay on this device only, never in the code.</p>
+      <div class="row" style="margin-top:8px">
+        <input type="url" id="cfg-url" placeholder="https://your-project.supabase.co" autocomplete="off" spellcheck="false">
+        <input type="password" id="cfg-anon" placeholder="Supabase anon key" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button class="btn btn-dark" id="cfg-save" type="button" style="padding:10px 18px;font-size:14px">Save connection</button>
+        <button class="btn btn-ghost" id="cfg-clear" type="button" style="padding:10px 18px;font-size:14px">Forget</button>
+        <span class="small muted" id="cfg-state"></span>
+      </div>
+    </details>
+  </div>
+
+  <div class="card">
+    <h2>1 · Select a photo</h2>
+    <div id="drop" tabindex="0" role="button" aria-label="Choose an image">
+      <p style="margin:0 0 8px"><strong>Tap to choose</strong> or drop an image here</p>
+      <p class="muted small" style="margin:0">JPG, PNG or WebP · processed in the cloud, original stays with you</p>
+      <input type="file" id="file" accept="image/*" style="display:none">
+    </div>
+    <div class="meta" id="orig-meta"></div>
+  </div>
+
+  <div class="card">
+    <h2>2 · Describe the change</h2>
+    <div class="chips">
+      <button class="chip" type="button" data-ins="Compress for WhatsApp, keep quality">Compress</button>
+      <button class="chip" type="button" data-ins="Remove background">Remove background</button>
+      <button class="chip" type="button" data-ins="Change background to clean white">White background</button>
+      <button class="chip" type="button" data-ins="Make it square for Instagram">Square crop</button>
+      <button class="chip" type="button" data-ins="Resize for WhatsApp Status 9:16">Story format</button>
+      <button class="chip" type="button" data-ins="Auto enhance and improve quality">Enhance</button>
+    </div>
+    <div class="row">
+      <input type="text" id="instruction" maxlength="200" placeholder='e.g. "Make background blur"'>
+      <button class="btn btn-dark" id="go" type="button">Enhance</button>
+    </div>
+    <p class="muted small" style="margin:10px 0 0">First run uploads the photo; later runs chain onto the last result.</p>
+    <p id="status" class="small" style="margin:10px 0 0" aria-live="polite"></p>
+  </div>
+
+  <div class="card" id="result-card" style="display:none">
+    <h2>3 · Result</h2>
+    <div class="preview">
+      <figure><img id="img-before" alt="Original"><figcaption>Original</figcaption></figure>
+      <figure><img id="img-after" alt="Edited"><figcaption>Edited</figcaption></figure>
+    </div>
+    <div class="meta" id="res-meta"></div>
+    <div class="row" style="margin-top:12px">
+      <button class="btn btn-wa" id="dl" type="button">Download</button>
+      <button class="btn btn-ghost" id="share" type="button">Share</button>
+    </div>
+    <div class="history" id="history"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>&copy; <span id="y">2026</span> BridgeForward</span>
+    <span><a href="/">Home</a> · <a href="/editor.html">Editor</a> · <a href="/#waitlist">Waitlist</a></span>
+  </div>
+</footer>
+
+<script src="/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  BF.registerSW();
+  BF.initInstall({ bannerId: 'install-banner', installBtnId: 'install-btn', dismissId: 'install-dismiss', iosId: 'install-ios' });
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  var $ = function (id) { return document.getElementById(id); };
+  var fileInput = $('file'), drop = $('drop'), goBtn = $('go'),
+      insInput = $('instruction'), statusEl = $('status'),
+      resultCard = $('result-card'), imgBefore = $('img-before'), imgAfter = $('img-after'),
+      origMeta = $('orig-meta'), resMeta = $('res-meta'), historyEl = $('history');
+
+  var current = null; // { dataUri, publicId, transformation, secureUrl, beforeBytes }
+
+  function setStatus(msg, cls) {
+    statusEl.textContent = msg || '';
+    statusEl.className = 'small ' + (cls || '');
+  }
+  function fmtKB(n) { return n > 1048576 ? (n / 1048576).toFixed(2) + ' MB' : Math.max(1, Math.round(n / 1024)) + ' KB'; }
+
+  // --- connection box ---
+  function paintCfg() {
+    var c = BF.getConfig();
+    $('cfg-url').value = c.url;
+    $('cfg-state').textContent = c.ready ? 'Connected as ' + c.url : 'Not configured on this device yet.';
+    $('conn-box').open = !c.ready;
+  }
+  $('cfg-save').addEventListener('click', function () {
+    BF.saveConfig($('cfg-url').value, $('cfg-anon').value);
+    $('cfg-anon').value = '';
+    paintCfg();
+    setStatus(BF.getConfig().ready ? 'Backend connected.' : 'Enter both the URL and the anon key.', BF.getConfig().ready ? 'ok' : 'err');
+  });
+  $('cfg-clear').addEventListener('click', function () {
+    BF.clearConfig(); paintCfg(); setStatus('Backend connection forgotten on this device.', '');
+  });
+  paintCfg();
+
+  // --- file picking ---
+  drop.addEventListener('click', function () { fileInput.click(); });
+  drop.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') fileInput.click(); });
+  ['dragover', 'dragenter'].forEach(function (ev) {
+    drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add('over'); });
+  });
+  ['dragleave', 'drop'].forEach(function (ev) {
+    drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove('over'); });
+  });
+  drop.addEventListener('drop', function (e) {
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) readFile(e.dataTransfer.files[0]);
+  });
+  fileInput.addEventListener('change', function () {
+    if (fileInput.files && fileInput.files[0]) readFile(fileInput.files[0]);
+  });
+
+  function readFile(f) {
+    if (!/^image\//.test(f.type)) { setStatus('Please choose an image file.', 'err'); return; }
+    var r = new FileReader();
+    r.onload = function () {
+      current = { dataUri: r.result, publicId: null, transformation: '', secureUrl: '', beforeBytes: f.size, name: f.name };
+      imgBefore.src = r.result;
+      origMeta.innerHTML = '';
+      [['Original', fmtKB(f.size)], ['Type', f.type]].forEach(function (p) {
+        var s = document.createElement('span'); s.className = 'pill'; s.textContent = p[0] + ': ' + p[1];
+        origMeta.appendChild(s);
+      });
+      resultCard.style.display = 'none';
+      setStatus('Photo ready. Describe the change, then tap Enhance.', 'ok');
+    };
+    r.onerror = function () { setStatus('Could not read that file.', 'err'); };
+    r.readAsDataURL(f);
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.chip'), function (c) {
+    c.addEventListener('click', function () { insInput.value = c.getAttribute('data-ins'); run(); });
+  });
+  goBtn.addEventListener('click', run);
+
+  function run() {
+    if (!current || !current.dataUri) { setStatus('Choose a photo first.', 'err'); return; }
+    if (!BF.getConfig().ready) {
+      setStatus('Connect the backend first (open “Backend connection” above).', 'err');
+      $('conn-box').open = true;
+      return;
+    }
+    var instruction = (insInput.value || '').trim() || 'Compress for WhatsApp, keep quality';
+    goBtn.disabled = true;
+    goBtn.innerHTML = '<span class="spinner"></span> Working…';
+    setStatus('Sending to BridgeForward…', '');
+    var t0 = performance.now();
+    var p;
+    if (!current.publicId) {
+      p = BF.callFunction('upload_and_transform', {
+        file: current.dataUri, instruction: instruction,
+        public_id: 'web_' + Date.now(), folder: 'bridgeforward/edited'
+      });
+    } else {
+      p = BF.callFunction('apply_transform', {
+        public_id: current.publicId, instruction: instruction,
+        previous_transform: current.transformation || ''
+      });
+    }
+    p.then(function (res) {
+      var ms = Math.round(performance.now() - t0);
+      current.publicId = res.public_id;
+      current.transformation = res.transformation || current.transformation || '';
+      current.secureUrl = res.secure_url;
+      imgAfter.src = res.secure_url;
+      resultCard.style.display = '';
+      resMeta.innerHTML = '';
+      var pills = [
+        ['Before', fmtKB(current.beforeBytes)],
+        ['After', res.bytes ? fmtKB(res.bytes) : '—'],
+        ['Saved', res.bytes ? Math.max(0, Math.round((1 - res.bytes / current.beforeBytes) * 100)) + '%' : '—'],
+        ['Size', res.width && res.height ? res.width + '×' + res.height : '—'],
+        ['Format', (res.format || '').toUpperCase() || '—'],
+        ['Took', (ms / 1000).toFixed(1) + 's']
+      ];
+      pills.forEach(function (pl) {
+        var s = document.createElement('span'); s.className = 'pill'; s.textContent = pl[0] + ': ' + pl[1];
+        resMeta.appendChild(s);
+      });
+      var th = document.createElement('img');
+      th.src = res.secure_url; th.alt = instruction;
+      th.addEventListener('click', function () { imgAfter.src = res.secure_url; });
+      historyEl.appendChild(th);
+      setStatus('Done — “' + instruction + '”. Describe another change to chain it.', 'ok');
+      resultCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }).catch(function (err) {
+      setStatus(err && err.message === 'not-configured'
+        ? 'Connect the backend first (open “Backend connection” above).'
+        : 'Failed: ' + (err && err.message ? err.message : err), 'err');
+    }).then(function () {
+      goBtn.disabled = false;
+      goBtn.textContent = 'Enhance';
+    });
+  }
+
+  $('dl').addEventListener('click', function () {
+    if (!current || !current.secureUrl) return;
+    setStatus('Downloading…', '');
+    fetch(current.secureUrl, { mode: 'cors' }).then(function (r) {
+      if (!r.ok) throw new Error('download failed');
+      return r.blob();
+    }).then(function (b) {
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(b);
+      a.download = 'bridgeforward-edited.jpg';
+      document.body.appendChild(a); a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 4000);
+      setStatus('Downloaded. Share it to WhatsApp as a document to keep full quality.', 'ok');
+    }).catch(function () {
+      window.open(current.secureUrl, '_blank', 'noopener');
+      setStatus('Opened the full-quality image in a new tab — save or share it from there.', 'ok');
+    });
+  });
+
+  $('share').addEventListener('click', function () {
+    if (!current || !current.secureUrl) return;
+    var done = function (okMsg) { setStatus(okMsg, 'ok'); };
+    if (navigator.canShare) {
+      fetch(current.secureUrl, { mode: 'cors' }).then(function (r) { return r.blob(); }).then(function (b) {
+        var file = new File([b], 'bridgeforward-edited.jpg', { type: b.type || 'image/jpeg' });
+        if (navigator.canShare({ files: [file] })) {
+          return navigator.share({ files: [file], title: 'BridgeForward' });
+        }
+        throw new Error('files not shareable');
+      }).then(function () { done('Shared.'); }).catch(function () {
+        if (navigator.share) {
+          navigator.share({ title: 'BridgeForward', text: 'My enhanced photo', url: current.secureUrl }).then(function () { done('Shared.'); }, function () {});
+        } else { setStatus('Sharing is not supported here — use Download instead.', 'err'); }
+      });
+    } else if (navigator.share) {
+      navigator.share({ title: 'BridgeForward', text: 'My enhanced photo', url: current.secureUrl }).then(function () { done('Shared.'); }, function () {});
+    } else {
+      setStatus('Sharing is not supported here — use Download instead.', 'err');
+    }
+  });
+})();
+</script>
+</body>
+</html>
