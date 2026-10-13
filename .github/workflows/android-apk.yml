@@ -34,9 +34,10 @@ jobs:
 
       - name: Ensure Android platform packages
         run: |
-          sdkmanager --install "platforms;android-35" "build-tools;35.0.0" > /dev/null
-          sdkmanager --licenses > /dev/null <<<'y'
-          yes | sdkmanager --licenses > /dev/null || true
+          SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          [ -x "$SDKMANAGER" ] || SDKMANAGER="$ANDROID_HOME/cmdline-tools/bin/sdkmanager"
+          yes | "$SDKMANAGER" --licenses > /dev/null || true
+          "$SDKMANAGER" --install "platforms;android-35" "build-tools;35.0.0"
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
