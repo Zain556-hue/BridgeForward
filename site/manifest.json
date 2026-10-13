@@ -1,11 +1,13 @@
 {
+  "id": "/",
   "name": "BridgeForward",
   "short_name": "BridgeForward",
   "description": "Share photos & videos without losing quality. Prepare media for WhatsApp with AI-powered editing.",
+  "lang": "en",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "background_color": "#F6F8FF",
   "theme_color": "#2B4EFF",
   "icons": [
@@ -38,6 +40,12 @@
       "sizes": "152x152",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "icons/icon-192.png",
