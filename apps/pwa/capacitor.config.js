@@ -1,10 +1,9 @@
-import type { CapacitorConfig } from '@capacitor/cli';
-
-const config: CapacitorConfig = {
+/** @type {import('@capacitor/cli').CapacitorConfig} */
+const config = {
   appId: 'com.bridgeforward.app',
   appName: 'BridgeForward',
   // The PWA lives in site/ at the repo root; `cap sync` copies it in.
   webDir: '../../site',
 };
 
-export default config;
+module.exports = config;
